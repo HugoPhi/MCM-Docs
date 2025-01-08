@@ -12,17 +12,17 @@
 
 #### 1.1. 野生动物保护：$S_1= {1\over 2}P+ {k \over 4\ln(k)} H'+ {D \over 4k} $ 
 
-![image-20250108230842603](./assets/Q2/S1.png)
+![image-20250108230842603](./assets/Q1/S1.png)
 
 #### 1.2. 自然资源保护部门$S_2= S_{grass} + S_{water} $
 
-![image-20250108231302652](./assets/Q2/S2_grass.png)
+![image-20250108231302652](./assets/Q1/S2_grass.png)
 
-![image-20250108231409065](./assets/Q2/S2_water.png)
+![image-20250108231409065](./assets/Q1/S2_water.png)
 
 #### 1.3. 经济部门$S_3= {1 \over {1+e^-{R_{rate} \over Q}}}$
 
-![image-20250108231737815](./assets/Q2/S3.png)
+![image-20250108231737815](./assets/Q1/S3.png)
 
 #### 1.4. 旅游部分$S_4 = {(1-\lambda) + (1-\sigma) \over 2}$
 
@@ -34,7 +34,7 @@
 - 方法：AHP（层次分析法）
 - 条件：四个方面的评判指标：$S_i(i=1,2,3,4)$，以及评判矩阵：
 
-![评判矩阵](./assets/Q1/评判矩阵.png)
+![评判矩阵](./assets/Q2/评判矩阵.png)
 
 - 目标：
 
@@ -42,7 +42,7 @@
   - 分数的计算公式。(文中3.1最后，以及Figure 7)[zt]
   - 各部分占比图。(Figure 7)[ly]
 
-  ![权重占比](./assets/Q1/权重占比.png)
+  ![权重占比](./assets/Q2/权重占比.png)
 
 
 

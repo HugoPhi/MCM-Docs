@@ -1,2 +1,3 @@
 # MCM-Docs
-some algorithms &amp; methods for MCM
+
+Training log & Some recordings about MCM for 2025.

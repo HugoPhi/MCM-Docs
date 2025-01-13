@@ -3,7 +3,6 @@ import numpy as np
 
 fig = plt.figure(figsize=(18, 10))
 
-# 创建6个子�?
 for i in range(1, 7):
     ax = fig.add_subplot(2, 3, i, projection='3d')
     _x = np.arange(4)
@@ -15,7 +14,7 @@ for i in range(1, 7):
     bottom = np.zeros_like(top)
     width = depth = 1
 
-    ax.bar3d(x, y, bottom, width, depth, top, shade=True,alpha=0.5)
+    ax.bar3d(x, y, bottom, width, depth, top, shade=True, alpha=0.5)
     ax.set_xlabel('X Label')
     ax.set_ylabel('Y Label')
     ax.set_zlabel('Z Label')

@@ -1,6 +1,15 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
+# 字体设置（使用加载的本地字体）
+plt.rcParams['font.family'] = 'Times New Roman'
+plt.rcParams['mathtext.fontset'] = 'stix'
+plt.rcParams['font.size'] = 15
+plt.rcParams['xtick.labelsize'] = 9
+plt.rcParams['ytick.labelsize'] = 9
+
+
 # 数据
 categories = ['Wildlife', 'Human', 'Livestock']
 wildlife_protection = [0.510774, 0.136791, 0.157609]

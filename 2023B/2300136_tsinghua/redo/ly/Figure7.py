@@ -1,0 +1,31 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 数据
+categories = ['Wildlife', 'Human', 'Livestock']
+wildlife_protection = [0.510774, 0.136791, 0.157609]
+natural_resources_conservation = [0.247575, 0.100906, 0.28744]
+local_financial_interest = [0.0631765, 0.351931, 0.118961]
+animal_tourism_interactions = [0.178475, 0.410373, 0.43599]
+
+data = [wildlife_protection, natural_resources_conservation, local_financial_interest, animal_tourism_interactions]
+labels = ['Wildlife Protection', 'Natural Resources Conservation', 'Local Financial Interest', 'Animal Tourism Interactions']
+sums = np.sum(data, axis=0)
+
+# 初始化左侧位置
+left_x = np.zeros(len(categories))
+
+# 绘制百分比横向柱状图
+for section, label in zip(data, labels):
+    x = section / sums
+    plt.barh(categories, x, left=left_x, label=label)
+    for i, (value, left) in enumerate(zip(x, left_x)):
+        plt.text(left + value / 2, i, f'{value:.0%}', ha='center', va='center')
+    left_x += x
+
+# 设置标题和显示图形
+plt.title('The weight of the four sections in different land types')
+plt.xlabel('Weight')
+plt.ylabel('Land type')
+plt.legend()  # 添加图例
+plt.show()

@@ -122,8 +122,8 @@ $$
 
 - 这里设计两层分配的饼图。
 
-![image-20250113191529001](/home/tibless/Documents/Code/MCM-Docs/2022B/2200084/assets/分配图.png)
+![image-20250113191529001](./assets/分配图.png)
 
 - 两层分配的桑基图。
 
-![image-20250113191706275](/home/tibless/Documents/Code/MCM-Docs/2022B/2200084/assets/桑基图.png)
+![image-20250113191706275](./assets/桑基图.png)

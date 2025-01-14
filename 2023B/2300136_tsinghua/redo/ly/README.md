@@ -41,7 +41,7 @@ A, B, C = params
 
 结果如下，因为数据的原因，所以结果不太准确，但大致方法步骤类似
 
-![image-20250113173740823](Figure%E5%A4%8D%E7%8E%B0/image-20250113173740823.png)
+![image-20250114111654356](README/image-20250114111654356.png)
 
 
 
@@ -82,7 +82,9 @@ fitted_population = linear_model(t, m, b)
 
 ```
 
-![image-20250113182432321](Figure%E5%A4%8D%E7%8E%B0/image-20250113182432321.png)
+#### 结果
+
+![image-20250114111725175](README/image-20250114111725175.png)
 
 
 
@@ -100,9 +102,9 @@ fitted_population = linear_model(t, m, b)
 
 Seaborn是基于Matplotlib的高级绘图库，提供了简洁的API来创建各种统计图形。绘制热力图可以使用Seaborn的*heatmap*函数。
 
+![image-20250114111748471](README/image-20250114111748471.png)
 
 
-![image-20250113200506504](Figure%E5%A4%8D%E7%8E%B0/image-20250113200506504.png)
 
 ### 图5 当地人口和旅游人口的线性拟合曲线
 
@@ -170,7 +172,9 @@ plt.show()
 
 
 
-![image-20250113204900173](Figure%E5%A4%8D%E7%8E%B0/image-20250113204900173.png)
+<font color=Red>将图例放在图外面，修改后</font>
+
+![image-20250114112412953](README/image-20250114112412953.png)
 
 ### 图11 牲畜和野生动物种群的敏感性分析
 
@@ -216,4 +220,8 @@ plt.show()
 
 这里就不弄太复杂的了
 
-![image-20250113205553163](Figure%E5%A4%8D%E7%8E%B0/image-20250113205553163.png)
+
+
+<font color=Red>字体能直接修改</font>
+
+![image-20250114112714382](README/image-20250114112714382.png)

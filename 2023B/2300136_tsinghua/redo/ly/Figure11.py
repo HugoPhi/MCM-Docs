@@ -1,6 +1,13 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
+plt.rcParams['font.family'] = 'Times New Roman'
+plt.rcParams['mathtext.fontset'] = 'stix'
+plt.rcParams['font.size'] = 15
+plt.rcParams['xtick.labelsize'] = 9
+plt.rcParams['ytick.labelsize'] = 9
+
 fig = plt.figure(figsize=(18, 10))
 
 for i in range(1, 7):

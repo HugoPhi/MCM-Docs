@@ -24,6 +24,7 @@ sums = np.sum(data, axis=0)
 # 初始化左侧位置
 left_x = np.zeros(len(categories))
 
+plt.figure(figsize=(10, 6))
 # 绘制百分比横向柱状图
 for section, label in zip(data, labels):
     x = section / sums
@@ -33,8 +34,10 @@ for section, label in zip(data, labels):
     left_x += x
 
 # 设置标题和显示图形
+
 plt.title('The weight of the four sections in different land types')
 plt.xlabel('Weight')
 plt.ylabel('Land type')
-plt.legend()  # 添加图例
+plt.legend(loc='upper left', bbox_to_anchor=(1, 1))  # 添加图例
+plt.tight_layout()  # 自动调整子图参数，使之填充整个图像区域
 plt.show()

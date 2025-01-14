@@ -2,9 +2,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
+
+# 字体设置（使用加载的本地字体）
+plt.rcParams['font.family'] = 'Times New Roman'
+plt.rcParams['mathtext.fontset'] = 'stix'
+plt.rcParams['font.size'] = 15
+plt.rcParams['xtick.labelsize'] = 9
+plt.rcParams['ytick.labelsize'] = 9
+
+
 # 定义线性模型函数
 def linear_model(t, m, b):
     return m * t + b
+
 
 # t 表示年份，
 t = np.linspace(1, 40, 40)  # 时间点
@@ -28,8 +38,8 @@ fitted_population = linear_model(t, m, b)
 plt.figure(figsize=(10, 6))
 plt.scatter(t, actual_population, label='Livestock populations', color='black')
 plt.plot(t, fitted_population, label='Lives', color='blue')
-plt.fill_between(t, fitted_population, fitted_population+residuals, color='blue', alpha=0.2)
-#plt.plot(t, actual_population, label='Random re', color='green', linestyle='dashed')
+plt.fill_between(t, fitted_population, fitted_population + residuals, color='blue', alpha=0.2)
+# plt.plot(t, actual_population, label='Random re', color='green', linestyle='dashed')
 plt.title("Linear Fitting Curve of Livestock Populations")
 plt.xlabel("Year")
 plt.ylabel("Total number of Livestock Population(thousand)")

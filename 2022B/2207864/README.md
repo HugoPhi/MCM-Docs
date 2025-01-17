@@ -19,6 +19,6 @@
 
 ​	这里需要获得每个州的经济分数。这里给出原始指标：
 
-![image-20250117235125780](/home/tibless/Documents/Code/MCM-Docs/2022B/2207864/assets/image-20250117235125780.png)
+![image-20250117235125780](./assets/image-20250117235125780.png)
 
 需要通过熵权法进行权重分配，然后根据TOPSIS得出每个州的评分。

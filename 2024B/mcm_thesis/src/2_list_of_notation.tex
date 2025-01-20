@@ -1,23 +1,23 @@
 \section{List of Notaion} % 一级标题 
 
 % Text
-this is List of Notaion.
+\indent This is List of Notaion.
 
 % Notation Table
-\begin{table}[h]
+\begin{table}[ht]
 \centering
-\begin{tabular}{@{}cl@{}}
-\toprule
-Symbol & Meaning \\
+\caption{Symbols and explanations}
+%\resizebox{0.8\textwidth}{!}{
+\begin{tabular}{cc}
+\toprule 
+symbol & explanation\\
 \midrule
-$v_{ij}^{(t)}$ & the volume of water available for general usage from dam $i$ to state $j$ at time $t$ \\
-$u_{ij}^{(t)}$ & the volume of water available for the hydropower production from dam $i$ to state $j$ at time $t$ \\
-$w_{ij}^{(t)}$ & the effectively produced electric energy through ultra-high voltage grid from dam $i$ to state $j$ at time $t$ \\
-$d_{j}^{\text{water}}$ & the demand on general water usage of state $j$ within unit time \\
-$d_{j}^{\text{elec}}$ & the demand on hydropower of state $j$ within unit time \\
-$V_{i}^{(t)}$ & the water storage amount of dam $i$ at time $t$ \\
+$Score_{A/B}(i)$ & The total score won by player $A/B$ at time step $i$ \\
+$\theta_{A/B}$ & The ability of player $A/B$ to maintain ``momentum" \\
+$M_{A}(i)$ & The relative ``momentum" of $A$ at the time step $i$ \\
+$J$ & Loss function for the multiple regression model \\
+$\alpha$ & Multiple regression weights for each feature\\
 \bottomrule
 \end{tabular}
-\caption{The List of Notation}
-\label{tab:notation}
+%}
 \end{table}

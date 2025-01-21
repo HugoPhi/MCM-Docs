@@ -1,0 +1,35 @@
+\graphicspath{{./figures}}  % 放置图片文件的路径
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif, .png} % 支持的图片格式
+
+\thispagestyle{empty}
+\vspace*{-16ex}
+\centerline{\begin{tabular}{*3{c}}
+		\parbox[t]{0.3\linewidth}{\begin{center}\textbf{Problem Chosen}\\ \Large \textcolor{red}{\Problem}\end{center}}
+		 & \parbox[t]{0.3\linewidth}{\begin{center}\textbf{2024\\ MCM/ICM\\ Summary Sheet}\end{center}}
+		 & \parbox[t]{0.3\linewidth}{\begin{center}\textbf{Team Control Number}\\ \Large \textcolor{red}{\Team}\end{center}} \\
+		\hline
+	\end{tabular}}
+
+
+
+\begin{center}
+	{\huge {Submersible Rescue}}
+\end{center}
+
+\begin{center}{\large \textbf{summary} }\end{center}
+
+
+The 2023 Wimbledon Gentlemen’s final witnessed a wonderful batter, a Spanish player ended great tennis player Novak Djokovic's Grand Slam. Not only did the match see a rising star apparence, but also revealed the crucial role of ``momentum" in tennis. In this regard, based on relevant data, we conduct in-deep studies of ``momentum" in tennis.
+
+Firstly, we did the data cleaning. We determined the cumulative score ratio of a particular game as the label vector, then fused the physical time-series feature and the temporal features of the match phase as the input vector. After processing the data, we chose the LSTM model with the RNN framework as the basic framework of the model. Considering its objective position in the overall game, we used its variant BiLSTM. At the same time, we introduced residual structure, L2 regularization, and the dropout mechanism to avoid the overfitting problem and stacked a 3-layer network to increase the expressive power. We used a deep learning approach to train the model and visualized the results. By comparing the real data and the predicted data, we found our model can well capture the rapidly changing situation in the field. We calculated the probability of "winning under one's serve" as an indicator of a player's performance and compared it with a player’s probability. This method can quantify player performance and remove the effect of factors like servers.
+
+For correlation between ``momentum" and ``swings" analysis, we quantify ``momentum". To construct a quantitative model, we use the physical definition and formula for ``momentum''$P=mv$ for reference and construct the initial model. Next, with the purpose of  making our model in line with the actual situation, we constantly try introducing parameters to optimize the initial model for the most suitable model.
+
+Based on the final model, we denote ``swings" and make it harmonize with `` momentum".  Owing to the ternary discrete nature of ``swings"  data, we adopt  image analysis to explore the correlation between ``momentum" and ``swings".  After analyzing corresponding images and comparing with actual match scores, we conclude that there is indeed a correlation between ``momentum" and ``swings" and it may even determine the direction of the game to a certain extent.
+
+We determined which places are the nodes where the momentum shifts. Since we took an approach similar to smoothing relative momentum, we only need to look at the places where the momentum crosses the zero point or drops off sharply. We looked at all the labels in the dataset, coded the features, such as one-hot coding, and numericalized some of the symbols to get some computable vectors of information about the features and used them as inputs to fit a simple multiple regression model to the "momentum". After the training, we sorted the features, and then analyzed them one by one to give suggestions to the athletes using these features.
+
+
+
+\textbf{Keywords:}  AHP; SAR(submersible search and rescue); Monte Carlo sampling; Runge-Kuta; Sensitivity Analysis.
+

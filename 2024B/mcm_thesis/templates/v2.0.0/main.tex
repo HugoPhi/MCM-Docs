@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MCM/ICM LaTeX Template %%
+%% 2024 MCM/ICM           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{left=1in,right=0.75in,top=1in,bottom=1in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Problem}{C} % 输入选题题号
+\newcommand{\Team}{2419299} % 输入队号
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{newtxtext} % 只用于文本
+\usepackage{newtxmath} % 如果你需要Times风格的数学符号
+\usepackage{lastpage} % 记录最后一页
+\usepackage{amsmath} % 数学公式
+\usepackage{graphicx} % 图片插入
+\usepackage{fancyhdr} % 页眉页脚
+\usepackage{float}  % 图片浮动位置的宏包
+\usepackage[table]{xcolor} % 加载 xcolor 包并允许表格颜色
+\usepackage{booktabs} % Assumption 样式
+\usepackage[backend=biber,style=numeric]{biblatex} % 引用
+\addbibresource{ref.bib}  % 添加引用文献bib源
+
+\setcounter{page}{1}
+\renewcommand{\contentsname}{\centerline{Contents}} % 目录标题
+\lhead{Team \# \Team} % 左侧页眉
+\rhead{Page \thepage\ of \pageref{LastPage}} % 右侧页眉
+\cfoot{} % 页脚
+
+\begin{document}
+
+\setlength{\parskip}{0.4em} % 设置段间距
+
+
+% Abstract
+\include{src/abstract}
+
+% Content
+\begingroup
+\setlength{\parskip}{0em}
+
+\clearpage
+\pagestyle{fancy}
+\tableofcontents % 生成目录
+\newpage
+\rhead{Page \thepage\ }
+
+\endgroup
+%%%%%%%%%%%% 正文开始 %%%%%%%%%%%%
+
+
+\include{src/0_introduction}
+\include{src/1_assumption_and_notations}
+% \include{src/2_list_of_notation}
+\include{src/3_model_i}
+\include{src/4_model_ii}
+\include{src/5_model_iii}
+\include{src/6_sensitivity_analysis}
+\include{src/7_strengths_and_weaknesses}
+
+
+\newpage
+\printbibliography  % 打印引用文献列表
+
+%%%%%%%%%%%% 正文结束 %%%%%%%%%%%%
+
+
+\end{document}

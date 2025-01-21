@@ -1,21 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 美国大学生数学建模竞赛（MCM/ICM）论文模板
 %%% 来源网站：www.latexstudio.net
-%%% 中文注释：小嗷犬 blog.marquis.eu.org
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% code: 代码文件夹
-%%% figures: 图片文件夹
-%%% *.cls: LaTeX 格式文件
-%%% *.tex: LaTeX 文档文件
-%%% *.bib: Bib 引用文献源文件
+%%% main.tex: 主LaTeX文件
+%%% ref.bib: Bib 引用文献源文件
+%%% mcmthesis.cls: LaTeX 格式文件
+%%% code/: 附件代码文件夹
+%%% figures/: 图片文件夹
+%%% src/*.tex: 各个章节LaTeX 文档文件
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% 可能用到的网站
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% LaTeX公式编辑器：https://www.latexlive.com/
-%%% Diagram流程图绘制：https://www.drawio.com/
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 模板参数设置
@@ -31,7 +25,6 @@
         titlepage = false,   % 标题页
         abstract = true  % 摘要
       }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 导入宏包和引用文献源
@@ -45,12 +38,11 @@
 
 %%% Packages for Referenece
 \usepackage[hyperref=true,style=ieee]{biblatex}  % biblatex参考文献宏包
-\usepackage[table]{xcolor} % 加载 xcolor 包并允许表格颜色
-
+\addbibresource{ref.bib}  % 添加引用文献bib源
 
 %%% Packages for Tables
 \usepackage{booktabs} % Assumption 样式
-\addbibresource{ref.bib}  % 添加引用文献bib源
+\usepackage[table]{xcolor} % 加载 xcolor 包并允许表格颜色
 
 %%% Packages for Graphs
 \usepackage{graphicx} % 导入 graphicx 包以支持图片插入
@@ -65,22 +57,20 @@
 \usepackage{xcolor}   % 导入 xcolor 包以处理颜色
 \usepackage{tikz}     % 导入 tikz 包以创建复杂背景
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% 文档信息设置
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%   首页   %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}  % 文档
 \title{Submersible Rescue}  % 文章标题
 \author{\small Team 9555}  % 作者，开启标题页才会显示
 \date{\today}  % 日期，开启标题页才会显示
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% 文档开始
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}  % 文档
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%   摘要   %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}  % 摘要
 
 	The 2023 Wimbledon \cite{vaswani2017attention} Gentlemen’s final witnessed a wonderful batter, a Spanish player ended great tennis player Novak Djokovic's Grand Slam. Not only did the match see a rising star apparence, but also revealed the crucial role of ``momentum" in tennis. In this regard, based on relevant data, we conduct in-deep studies of ``momentum" in tennis.
@@ -102,16 +92,19 @@
 \maketitle  % 生成sheet页
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%   目录   %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begingroup
 \setlength{\parskip}{0em}
-
 \tableofcontents  % 生成目录表
-
 \endgroup
 
-%%%%%%%%%%%%%%%%%% sheet页与目录页结束 %%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%   正文   %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage  % 开始新的一页
+
 \input{src/0_introduction}
 \input{src/1_assumption_and_notations}
 \input{src/3_model_i}
@@ -123,15 +116,13 @@
 %%% Referenece
 \begingroup
 \setlength{\parskip}{0em}
-
 \newpage
 \printbibliography[heading=bibintoc]  % 打印引用文献列表
-
 \endgroup
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%% 正文结束 %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%   Memo   %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \phantomsection % 为 hyperref 准备锚点
@@ -147,6 +138,6 @@
 % \textbf{Python source code:}
 % \lstinputlisting[language=python]{./code/python.py}
 % \end{appendices}  % 附录结束
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \end{document}  % 文档结束

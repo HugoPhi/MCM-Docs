@@ -1,7 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% 美国大学生数学建模竞赛（MCM/ICM）论文模板
-%%% 来源网站：www.latexstudio.net
+%%%%%% 美国大学生数学建模竞赛（MCM/ICM）论文模板
+%%%%%% 来源网站：www.latexstudio.net
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% 文件功能说明
 %%% main.tex: 主LaTeX文件
 %%% ref.bib: Bib 引用文献源文件
 %%% mcmthesis.cls: LaTeX 格式文件
@@ -9,6 +10,11 @@
 %%% figures/: 图片文件夹
 %%% src/*.tex: 各个章节LaTeX 文档文件
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% 工具使用说明
+%%% 公式图片转代码：https://snip.mathpix.com/home
+%%% 流程图工具：
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -41,12 +47,17 @@
 \addbibresource{ref.bib}  % 添加引用文献bib源
 
 %%% Packages for Tables
-\usepackage{booktabs} % Assumption 样式
+\usepackage{booktabs} % Assumption 表格样式
 \usepackage[table]{xcolor} % 加载 xcolor 包并允许表格颜色
 
 %%% Packages for Graphs
 \usepackage{graphicx} % 导入 graphicx 包以支持图片插入
 \usepackage{subcaption} % 导入 subcaption 包以支持子图
+
+%%% Packages for PseudoCode
+\usepackage{amsmath} % 数学公式
+\usepackage{algorithm} % 伪代码
+\usepackage{algorithmic} % 伪代码
 
 %%% Packages for Memo
 \usepackage{multicol} % 导入 multicol 包以支持多列布局
@@ -105,8 +116,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage  % 开始新的一页
 
-\input{src/0_introduction}
-\input{src/1_assumption_and_notations}
+\input{src/1_introduction}
+\input{src/2_assumption_and_notations}
 \input{src/3_model_i}
 \input{src/4_model_ii}
 \input{src/5_model_iii}

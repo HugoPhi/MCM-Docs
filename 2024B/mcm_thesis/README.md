@@ -5,30 +5,7 @@
 ## 项目结构
 
 ```
-.
-├── build
-│   └── main.pdf              # 编译后的 PDF 文件
-├── code
-│   ├── main.cpp              # MATLAB / C++ 代码文件
-│   └── python.py             # Python 代码文件
-├── figures
-│   └── example.eps           # 图片文件夹，用于存放图形文件
-├── main.tex                  # 主 LaTeX 文件，包含文档的主要结构和内容
-├── Makefile                  # 自动化编译脚本
-├── mcmthsis.cls              # 自定义 LaTeX 类文件，定义文档格式
-├── README.md                 # 项目的说明文件
-├── ref.bib                   # 参考文献文件
-├── src
-│   ├── 0_introduction.tex    # 引言章节
-│   ├── 1_analysis_of_the_problem.tex  # 问题分析章节
-│   ├── 2_calculating_and_simplifying_the_model.tex  # 模型简化与计算章节
-│   ├── 3_the_model_results.tex  # 模型结果章节
-│   ├── 4_validating_the_model.tex  # 模型验证章节
-│   ├── 5_conclusion.tex     # 结论章节
-│   ├── 6_summary.tex        # 总结章节
-│   ├── 7_evaluate_of_the_mode.tex  # 模型评估章节
-│   └── 8_strengths_and_weaknesses.tex  # 强项与弱项章节
-└── template.tex              # LaTeX 模板文件，用于文档的其他设置和参考
+
 ```
 
 ## 如何编译项目
